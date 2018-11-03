@@ -48,11 +48,11 @@ def makeWebhookResult(req):
 
 
     return {
-            "speech": b,
-            "displayText": b,
+            "speech": "aa",
+            "displayText": "aa",
             #"data": {},
             #"contextOut": [],
-            "source": b
+            "source": "aa"
         }
 
 
