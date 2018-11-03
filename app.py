@@ -49,13 +49,13 @@ def makeWebhookResult(req):
 
 
 
-    return {
-            "speech": b+"\n"+"masukkan jumlah yang ingin anda pesan"+"\n"+"masukkan dengan menuliskan .0 dibagian akhir"+"\n"+"contoh memesan 2 : 2.0" ,
-            "displayText": b+"\n"+"masukkan jumlah yang ingin anda pesan"+"\n"+"masukkan dengan menuliskan .0 dibagian akhir"+"\n"+"contoh memesan 2 : 2.0",
-            #"data": {},
-            #"contextOut": [],
-            "source": b+"\n"+"masukkan jumlah yang ingin anda pesan"+"\n"+"masukkan dengan menuliskan .0 dibagian akhir"+"\n"+"contoh memesan 2 : 2.0"
-        }
+        return {
+                "speech": b+"\n"+"masukkan jumlah yang ingin anda pesan"+"\n"+"masukkan dengan menuliskan .0 dibagian akhir"+"\n"+"contoh memesan 2 : 2.0" ,
+                "displayText": b+"\n"+"masukkan jumlah yang ingin anda pesan"+"\n"+"masukkan dengan menuliskan .0 dibagian akhir"+"\n"+"contoh memesan 2 : 2.0",
+                #"data": {},
+                #"contextOut": [],
+                "source": b+"\n"+"masukkan jumlah yang ingin anda pesan"+"\n"+"masukkan dengan menuliskan .0 dibagian akhir"+"\n"+"contoh memesan 2 : 2.0"
+            }
 
     if (req.get("result").get("action") == "jumlah"):
         a=req.get("result").get("resolvedQuery")
@@ -64,13 +64,13 @@ def makeWebhookResult(req):
         
         total=aaa*4000
         
-    return {
-            "speech": "anda telah memesan"+str(a)+"bungkus dengan total harga "+str(total),
-            "displayText": "anda telah memesan"+str(a)+"bungkus dengan total harga "+str(total),
-            #"data": {},
-            #"contextOut": [],
-            "source": "anda telah memesan"+str(a)+"bungkus dengan total harga "+str(total),
-        }
+        return {
+                "speech": "anda telah memesan"+str(a)+"bungkus dengan total harga "+str(total),
+                "displayText": "anda telah memesan"+str(a)+"bungkus dengan total harga "+str(total),
+                #"data": {},
+                #"contextOut": [],
+                "source": "anda telah memesan"+str(a)+"bungkus dengan total harga "+str(total),
+            }
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 4040))
