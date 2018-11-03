@@ -44,15 +44,15 @@ def makeWebhookResult(req):
         elif(a==3):
             b="anda membeli makroni asin"
 
-        print("terima kasih telah memesan")
+        
 
 
     return {
-            "speech": b,
-            "displayText": b,
+            "speech": b+"\n"+"masukkan jumlah",
+            "displayText": b+"\n"+"masukkan jumlah",
             #"data": {},
             #"contextOut": [],
-            "source": b
+            "source": b+"\n"+"masukkan jumlah"
         }
 
 
