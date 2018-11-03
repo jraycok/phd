@@ -39,12 +39,14 @@ def makeWebhookResult(req):
         a=int(a)
         if(a==1):
             b="anda membeli kripik singkong (4.000)"
+            bb=" kripik singkong"
         elif(a==2):
             b="anda membeli makroni pedas (4.000)"
+            bb=" makroni pedas"
         elif(a==3):
             b="anda membeli makroni asin (4.000)"
+            bb=" makroni asin"
 
-        
 
 
     return {
@@ -55,7 +57,22 @@ def makeWebhookResult(req):
             "source": b+"\n"+"masukkan jumlah yang ingin anda pesan"+"\n"+"masukkan dengan menuliskan .0 dibagian akhir"+"\n"+"contoh memesan 2 : 2.0"
         }
 
+    if (req.get("result").get("action") == "jumlah"):
+        a=req.get("result").get("resolvedQuery")
+        a=int(a)
 
+        total=a*4000
+        b="Anda telah memesan "
+        c=str(a)
+        d=" dengan total Rp "
+        e=str(total)
+    return {
+            "speech": b+c+bb+d+e,
+            "displayText":b+c+bb+d+e,
+            #"data": {},
+            #"contextOut": [],
+            "source":b+c+bb+d+e,
+        }
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 4040))
