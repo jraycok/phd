@@ -67,11 +67,11 @@ def makeWebhookResult(req):
         d=" dengan total Rp "
         e=str(total)
     return {
-            "speech": b+c+bb+d+e,
-            "displayText":b+c+bb+d+e,
+            "speech": b+c+d+e,
+            "displayText":b+c+d+e,
             #"data": {},
             #"contextOut": [],
-            "source":b+c+bb+d+e,
+            "source":b+c+d+e,
         }
 
 if __name__ == '__main__':
