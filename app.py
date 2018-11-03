@@ -36,7 +36,7 @@ def webhook():
 def makeWebhookResult(req):
     if (req.get("result").get("action") == "pilihsnacknya"):
         a=req.get("result").get("resolvedQuery")
-     
+        a=int(a)
         if(a==1):
             b="anda membeli kripik singkong"
         elif(a==2):
