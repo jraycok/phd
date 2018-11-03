@@ -38,11 +38,11 @@ def makeWebhookResult(req):
         a=req.get("result").get("resolvedQuery")
         a=int(a)
         if(a==1):
-            b="anda membeli kripik singkong"
+            b="anda membeli kripik singkong (4.000)"
         elif(a==2):
-            b="anda membeli makroni pedas"
+            b="anda membeli makroni pedas (4.000)"
         elif(a==3):
-            b="anda membeli makroni asin"
+            b="anda membeli makroni asin (4.000)"
 
         
 
