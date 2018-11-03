@@ -59,19 +59,20 @@ def makeWebhookResult(req):
 
     if (req.get("result").get("action") == "jumlah"):
         a=req.get("result").get("resolvedQuery")
-        a=int(a)
-
+        aa=a.split(".")
+        a=int(aa[0])
+        
         total=a*4000
         b="Anda telah memesan "
         c=str(a)
         d=" dengan total Rp "
         e=str(total)
     return {
-            "speech": b+c+d+e,
-            "displayText":b+c+d+e,
+            "speech": b+c+bb+d+e,
+            "displayText":b+c+bb+d+e,
             #"data": {},
             #"contextOut": [],
-            "source":b+c+d+e,
+            "source":b+c+bb+d+e,
         }
 
 if __name__ == '__main__':
