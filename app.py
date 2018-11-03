@@ -38,21 +38,21 @@ def makeWebhookResult(req):
         a=req.get("result").get("resolvedQuery")
 
         if(a==1):
-            print("anda membeli kripik singkong")
+            b=print("anda membeli kripik singkong")
         elif(a==2):
-            print("anda membeli makroni pedas")
+            b=print("anda membeli makroni pedas")
         elif(a==3):
-            print("anda membeli makroni asin")
+            b=print("anda membeli makroni asin")
 
         print("terima kasih telah memesan")
 
 
     return {
-            "speech": hasilakhir,
-            "displayText": " ",
+            "speech": b,
+            "displayText": b,
             #"data": {},
             #"contextOut": [],
-            "source": " "
+            "source": b
         }
 
 
