@@ -48,11 +48,11 @@ def makeWebhookResult(req):
 
 
     return {
-            "speech": b+"\n"+"masukkan jumlah",
-            "displayText": b+"\n"+"masukkan jumlah",
+            "speech": b+"\n"+"masukkan jumlah yang ingin anda pesan"+"\n"+"masukkan dengan menuliskan 0. dahulu"+"\n"+"contoh memesan 2 : 0.2" ,
+            "displayText": b+"\n"+"masukkan jumlah yang ingin anda pesan"+"\n"+"masukkan dengan menuliskan 0. dahulu"+"\n"+"contoh memesan 2 : 0.2",
             #"data": {},
             #"contextOut": [],
-            "source": b+"\n"+"masukkan jumlah"
+            "source": b+"\n"+"masukkan jumlah yang ingin anda pesan"+"\n"+"masukkan dengan menuliskan 0. dahulu"+"\n"+"contoh memesan 2 : 0.2"
         }
 
 
